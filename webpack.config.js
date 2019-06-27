@@ -10,10 +10,19 @@ module.exports = {
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
+  module: {
+    rules: [{
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: ['babel-loader']
+    }]
+  },
   devServer: {
     contentBase: path.join(__dirname, 'src')
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: path.join(__dirname, 'src', 'index.html')
-  })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'index.html')
+    })
+  ]
 };
