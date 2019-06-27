@@ -6,9 +6,9 @@ import './main.scss'
 class App extends React.Component{
   render(){
     return(
-      <div>
+      <React.Fragment>
         <TodoList/>
-      </div>
+      </React.Fragment>
     )
   }
 }
