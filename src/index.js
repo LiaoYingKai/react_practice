@@ -1,7 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import './main.scss'
-let HelloWorld = () => {
-  return <h1 > Hello there World! < /h1>
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
+  render() {
+    return (
+      <div>
+        <h1>Hello, World!</h1>
+      </div>
+    );
+  }
 }
-  ReactDOM.render(  <HelloWorld/ > , document.getElementById("root"));
+
+ReactDOM.render(<App />, document.getElementById('app'));
