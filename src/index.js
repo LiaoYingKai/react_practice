@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import './main.scss'
 let HelloWorld = () => {
   return <h1 > Hello there World! < /h1>
 }
