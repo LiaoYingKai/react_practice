@@ -1,5 +1,9 @@
-## This is about React Practice
+# This is about React Practice
 
+## How to Run
+- clone this respository
+- `npm run dev` in command line
+- open localhost:8080 in browser
 
 ### reference link
 - [button style reference](https://codepen.io/FelipeMarcos/pen/tfhEg)
