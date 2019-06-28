@@ -34,13 +34,11 @@ export default class TodoList extends React.Component {
   }
   render() {
     return(
-      < React.Fragment >
-        < div >
-          Hello World!!!
-          < TodoItem items = {this.state.todoItems} deleteTodo={this.deleteTodo} checked={this.checked}/>
+        < div className={"container"}>
+          <div className={"title"}>Todo List!!!</div>
           < TodoInput text={this.state.text} submitTodo= {this.submitTodo} onChange={this.onChange}/>
-          {this.state.text}
+          < TodoItem items = {this.state.todoItems} deleteTodo={this.deleteTodo} checked={this.checked}/>
         < /div>
-      < /React.Fragment>)
+      )
   }
 }
