@@ -4,10 +4,9 @@ let TodoItem = (props) =>(
     <ul>
         {
           props.items.map((item,index)=>(
-              <li key={index} className={item.isDone? "red":"yellow"}>
-                {item.todo}
-                <button onClick={props.checked.bind(this,index)}> check </button>
-                {item.isDone.toString()}
+              <li key={index} >
+                <div className={`checkBox ${item.isDone?"checkedStyle":""}`} onClick={props.checked.bind(this,index)}></div>
+                <p className={item.isDone? "textCheckedStyle":""}>{item.todo}</p>
                 <button onClick={props.deleteTodo.bind(this,index)}>delete</button>
               </li>
             )

@@ -9,7 +9,13 @@ export default class TodoList extends React.Component {
     this.onChange = this.onChange.bind(this)
     this.checked = this.checked.bind(this)
     this.state = {
-      todoItems: [],
+      todoItems: [{
+        todo:"test",
+        isDone: false
+      },{
+        todo:"test2",
+        isDone: true
+      },],
       text: ""
     }
   }

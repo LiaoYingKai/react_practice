@@ -14,3 +14,16 @@
       background: $activeBackground;
   }
 }
+@mixin checkBoxTick($top,$left,$height,$rotate){
+  top: $top;
+  left: $left;
+  content: ' ';
+  width: 5px;
+  height: $height;
+  background-color: #34b93d;
+  display: inline-block;
+  transform-origin: left top;
+  border-radius: 5px;
+  transform: rotate($rotate);
+  position: absolute;
+}
