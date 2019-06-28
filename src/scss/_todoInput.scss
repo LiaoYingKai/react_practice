@@ -1,0 +1,64 @@
+@import "_color.scss";
+.todoInputBox {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  button {
+    @include buttonStyle($inputButtonColor,$inputButtonActiveColor);
+  }
+}
+
+.inputContainer {
+  width: 500px;
+  display: flex;
+  flex-flow: column-reverse;
+  align-items: flex-start;
+  position: relative;
+
+  input {
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-bottom: 1px solid #d5d5d5;
+    padding: 10px 0;
+    width: 100%;
+    transition: all 0.3s;
+
+    &::placeholder {
+      opacity: 0;
+    }
+
+    &:focus {
+      border-bottom-color: #fff;
+    }
+
+    &:focus~div,
+    &:not(:placeholder-shown)~div {
+      width: 100%;
+    }
+
+    &:focus+label,
+    &:not(:placeholder-shown)+label {
+      color: #52616c;
+      transform: translate(10px) scale(0.9);
+    }
+  }
+
+  label {
+    color: #3f4f5b;
+    transform-origin: left bottom;
+    transform: translate(5px,35px);
+    transition: all 0.3s;
+  }
+
+  .bottom-line {
+    order: 2;
+    width: 0;
+    height: 2px;
+    background-color: #658db5;
+    transition: all 0.3s;
+    position: absolute;
+  }
+}
